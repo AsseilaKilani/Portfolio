@@ -1,0 +1,469 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+.header-top, .Titre, .Titre-noir, .accordion-header, .accordion-body, .diplome-content, .card-body, .footer, .contact-form, .social-links, .copyright {
+  font-family: 'Poppins', sans-serif;
+}
+.App-link {
+  color: #61dafb;
+}
+.carousel-item img {
+
+    width:1000px;
+
+  border: 40px solid #ddd; /* Add a border to the images */
+  border-radius: 50px; /* Add rounded corners to the images */
+}
+
+  .carousel {
+    max-width: 800px; /* Increase the width of the carousel */
+    margin: 0 auto; /* Center the carousel */
+    height: 500px; /* Set the height of the carousel */
+  }
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: rgba(0, 0, 0, 0.5); /* Add a semi-transparent background */
+  border-radius: 50%; /* Make the icons circular */
+  padding: 10px; /* Add some padding */
+}
+
+.carousel-control-prev-icon:hover,
+.carousel-control-next-icon:hover {
+  background-color: rgba(0, 0, 0, 0.8); /* Darken the background on hover */
+}
+
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+li {
+  margin-left: 50px;
+}
+
+img {
+  width: 70px;
+}
+.carousel-item {
+  transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+}
+
+.carousel-item-next,
+.carousel-item-prev,
+.carousel-item.active {
+  display: block;
+  opacity: 1;
+}
+.diplome-image {
+  width: 600px; /* Adjust the width as needed */
+  height: auto; /* Maintain aspect ratio */
+}
+.scroll-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #3d4351;
+  color: #f4f4f4;
+  border: none;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  font-size: 24px;
+  cursor: pointer;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.scroll-to-top:hover {
+  transform: scale(1.1);
+  opacity: 0.8;
+}
+.carousel-item-next.carousel-item-left,
+.carousel-item-prev.carousel-item-right,
+.carousel-item.active.carousel-item-right,
+.carousel-item.active.carousel-item-left {
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centre les éléments horizontalement */
+  padding: 1rem; /* Ajoute un peu de padding */
+  font-size: calc(10px + 2vmin);
+  color: #61dafb;
+}
+
+.header-top {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 2rem; /* Ajoute un espace en bas */
+}
+
+.numero {
+  width: 100px;
+  height: 100px;
+  background-color: #3498db;
+  color: white;
+  font-size: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%; /* Crée la forme ronde */
+  text-align: center;
+  margin-bottom: 1rem; /* Ajoute un espace en bas */
+  margin-top: 1rem; /* Ajoute un espace en haut */
+}
+.Titre {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 8rem; /* Set margin-bottom to 8rem for all */
+  color: #61dafb; /* Apply blue color */
+}
+
+.section2 .Titre {
+  margin-bottom: 0; /* Override margin-bottom for competences section */
+}
+.section2 .header-top {
+  margin-bottom: 0; /* Supprime l'espace en bas */
+}
+.section2 .carousel {
+  margin-top: 0; /* Supprimer l'espace en haut du carrousel */
+}
+.Titre-noir {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 1rem; /* Réduit l'espace en bas pour rapprocher la pagination */
+  color: #000; /* Applique la couleur noire */
+}
+
+.accordion-container {
+  display: flex;
+  justify-content: center; /* Centre les éléments horizontalement */
+  width: 100%;
+}
+
+.accordion {
+  width: 80%; /* Réduit la largeur pour centrer */
+  max-width: 800px; /* Limite la largeur maximale */
+  margin: 0 auto; /* Centre horizontalement */
+}
+
+.accordion-item {
+  text-align: left; /* Aligne le texte à gauche */
+}
+
+.accordion-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background-color: #282c34;
+  color: #61dafb;
+  font-size: 1.5rem;
+  border: none !important; /* Supprime les bordures */
+  box-shadow: none !important; /* Supprime les ombres */
+  outline: none !important; /* Supprime les contours */
+}
+
+.accordion-title {
+  flex-grow: 1;
+}
+
+.accordion-arrow {
+  transition: transform 0.3s ease;
+}
+
+.accordion-arrow.open {
+  transform: rotate(180deg);
+}
+
+.accordion-collapse {
+  display: none;
+  background-color: #282c34;
+  color: #61dafb;
+  padding: 1rem;
+  border: none !important; /* Supprime les bordures */
+  box-shadow: none !important; /* Supprime les ombres */
+  outline: none !important; /* Supprime les contours */
+}
+
+.accordion-collapse.show {
+  display: block;
+}
+
+.accordion-item,
+.accordion-item * {
+  border: none !important;
+  box-shadow: none !important;
+  outline: none !important;
+}
+
+.pagination {
+  justify-content: center;
+  margin-top: 0.5rem; /* Positionne la pagination plus haut */
+}
+
+.diplome-content {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.card-deck {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.random-icons {
+  position: relative;
+  width: 100%;
+  height: 300px;
+  overflow: hidden;
+}
+
+.icon {
+  position: absolute;
+  font-size: 2rem;
+  animation: drop 2s ease-in-out forwards;
+}
+
+@keyframes drop {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.image-line {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
+}
+
+.image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+  height: 100px;
+  border: 1px solid #000;
+  margin: 0 10px;
+}
+
+.image-placeholder {
+  font-size: 2rem;
+}
+
+.separator {
+  width: 2px;
+  height: 100px;
+  background-color: #000;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.timeline {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  margin: 2rem 0;
+  padding: 0 2rem;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background-color: #3498db;
+  z-index: 1;
+  margin-right: 20px ;
+  
+}
+
+.timeline::after {
+  content: '→';
+  position: absolute;
+  top: 47%;
+  right: -0px;
+  transform: translateY(-50%);
+  font-size: 3rem;
+  color: #3498db;
+}
+
+.timeline-item {
+  position: relative;
+  width: 20%;
+  text-align: center;
+}
+
+.timeline-item::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 1px;
+  height: 50px;
+  background-color: #3498db;
+  z-index: 1;
+  transform: translateY(-50%);
+}
+
+.timeline-content {
+  position: relative;
+  padding: 1rem;
+  background-color: white;
+  border: 1px solid #3498db;
+  border-radius: 8px;
+  z-index: 2;
+  transition: transform 0.3s ease;
+  font-size: 0.8rem; /* Ajuste la taille du texte pour qu'il rentre dans les cadres */
+}
+
+.timeline-content:hover {
+  transform: scale(1.1);
+}
+
+.timeline-icon {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.timeline-description {
+  display: none;
+}
+
+.timeline-content:hover .timeline-description {
+  display: block;
+}
+.footer {
+  background-color: #000;
+  color: #fff;
+  padding: 2rem;
+  text-align: center;
+}
+
+.contact-form {
+  margin-bottom: 2rem;
+}
+
+.contact-form h3 {
+  margin-bottom: 1rem;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+  border: none;
+  border-radius: 4px;
+  background-color: #333; /* Couleur de fond plus nuancée et proche du gris */
+  color: #fff; /* Couleur du texte en blanc pour contraste */
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+  color: #bbb; /* Couleur des placeholders en gris clair */
+}
+
+.contact-form button {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 4px;
+  background-color: #3498db;
+  color: #fff;
+  cursor: pointer;
+}
+
+.social-links {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.social-link {
+  margin: 0 1rem;
+}
+
+.social-link img {
+  width: 40px;
+  height: 40px;
+  transition: all 0.3s ease;
+}
+
+.social-link:hover img {
+  filter: brightness(0) invert(1); /* Clignote en blanc */
+}
+
+.copyright {
+  margin-top: 1rem;
+  font-size: 0.8rem;
+}.image-line {
+   display: flex;
+   justify-content: space-around;
+   align-items: center;
+   flex-wrap: wrap;
+   margin-top: 20px;
+ }
+
+.image-container {
+  position: relative;
+  width: 150px; /* Increased size */
+  height: 150px; /* Increased size */
+  margin: 20px;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.image-container.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.image-title {
+  position: absolute;
+  top: -30px; /* Position text above the image */
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+}

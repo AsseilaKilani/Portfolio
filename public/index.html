@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#000000" />
+  <meta name="description" content="Web site created using create-react-app" />
+  <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+  <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+  <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+  <title>React App</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="/src/css/bootstrap.css">
+  <link rel="stylesheet" href="/src/stylesport.css">
+  <link rel="stylesheet" href="/styles/société.css">
+</head>
+<body>
+<noscript>You need to enable JavaScript to run this app.</noscript>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav">
+      <li class="nav-item active">
+        <a class="nav-link" href="#profil" onclick="scrollToSection(event, 'profil')">Profil</a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="#diplome" onclick="scrollToSection(event, 'diplome')">Diplomes</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#competences" onclick="scrollToSection(event, 'competences')">Compétences</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#projets" onclick="scrollToSection(event, 'projets')">Projets</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#personnalite" onclick="scrollToSection(event, 'personnalite')">Personnalité</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#loisirs" onclick="scrollToSection(event, 'loisirs')">Loisirs</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#experiences" onclick="scrollToSection(event, 'experiences')">Expériences</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+<script>
+  function scrollToSection(event, sectionId) {
+    event.preventDefault(); // Empêche le saut direct dû au lien href
+    const section = document.getElementById(sectionId);
+    if (section) {
+      window.scrollTo({
+        top: section.offsetTop,
+        behavior: 'smooth'
+      });
+    }
+  }
+</script>
+
+<main>
+  <section class="welcome-section">
+    <div class="welcome-text">
+      <h1 class="welcome-name">KILANI ASSEILA</h1>
+      <p class="welcome-title">Développeur Web</p>
+    </div>
+    <div class="welcome-photo">
+      <img src="/images/photo.JPG" alt="Kilani Asseila" />
+    </div>
+  </section>
+</main>
+
+<div id="root"></div>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/js/bootstrap.min.js"></script>
+</body>
+</html>
