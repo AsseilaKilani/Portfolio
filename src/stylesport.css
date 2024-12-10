@@ -28,6 +28,12 @@ body{
     background-color: #3d4351;
     
 }
+.navbar navbar-expand-lg navbar-light bg-light{
+    background-color: #3d4351 !important;
+}
+.bg-light{
+    background-color: #3d4351 !important;
+}
 .container{
     background-color: #b99b6c;
 }

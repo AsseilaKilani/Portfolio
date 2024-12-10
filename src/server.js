@@ -5,23 +5,20 @@ const { exec } = require('child_process');
 const app = express();
 const port = 3002;
 
-// Utiliser le middleware CORS
 app.use(cors({
-    origin: 'http://localhost:3002', // Permettre uniquement l'origine du frontend React
+    origin: 'http://51.83.79.10',  
     methods: 'GET,POST,PUT,DELETE',
     allowedHeaders: 'Content-Type'
 }));
 
-// Servir les fichiers statiques à partir du dossier 'public'
-app.use(express.static(path.join(__dirname, '..', 'public')));
+app.use(express.static(path.join(__dirname, 'public')));
 
-// Route pour la racine
 app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, '..', 'public', 'index.html'));
+    res.sendFile(path.join(__dirname, 'public', 'index.html'));
 });
 
 app.get('/start-bomberman', (req, res) => {
-    exec('cmd /c run_bomberman.sh', (error, stdout, stderr) => {
+    exec('./run_bomberman.sh', (error, stdout, stderr) => {
         if (error) {
             console.error(`Error: ${error.message}`);
             return res.status(500).send('Error starting Bomberman');
@@ -35,6 +32,7 @@ app.get('/start-bomberman', (req, res) => {
     });
 });
 
-app.listen(port, () => {
-    console.log(`Server running at http://localhost:${port}`);
+// Démarrer le serveur
+app.listen(port, '51.83.79.10', () => {  // Utilisez l'IP de votre VPS
+    console.log(`Server running at http://51.83.79.10:${port}`);
 });

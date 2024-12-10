@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css'; // Ajout du CSS Bootstrap
 import 'bootstrap/dist/js/bootstrap.bundle.min.js'; // Ajout du JS Bootstrap
-import './stylesport.css';
+import './css/bootstrap.css';
 import axios from 'axios';
 
 
@@ -68,7 +68,7 @@ function PaginationDiplome() {
 }
 
 function RandomIcons() {
-  const icons = ['🎨', '🎮', '🎵', '📚', '🏃‍♂️', '🚴‍♂️', '🏊‍♂️', '🧘‍♂️'];
+  const icons = ['🎨', '🎮', '🎵', '📚', '🏃‍♂️', '🏊‍♂️', '🧘‍♂️'];
   const [positions, setPositions] = useState([]);
 
   useEffect(() => {
@@ -159,7 +159,7 @@ function Footer() {
     const formData = new FormData(e.target);
     const data = Object.fromEntries(formData.entries());
 
-    fetch('http://localhost:8000/sendEmail.php', {
+    fetch('https://www.kilaniasseilaportfolio.fr/sendEmail.php', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
@@ -244,7 +244,7 @@ function Personnalite() {
   );
 }
 function Competences() {
-  document.addEventListener('DOMContentLoaded', () => {
+  useEffect(() => {
     const carousel = document.querySelector('#carouselExampleAutoplaying');
     const carouselInner = carousel.querySelector('.carousel-inner');
     const prevButton = carousel.querySelector('.carousel-control-prev');
@@ -267,45 +267,48 @@ function Competences() {
       updateCarousel();
     };
 
-    nextButton.addEventListener('click', handleNextImage);
-    prevButton.addEventListener('click', handlePrevImage);
-  });
+    return () => {
+      nextButton.removeEventListener('click', handleNextImage);
+      prevButton.removeEventListener('click', handlePrevImage);
+    };
+  }, []);
 
   return (
-      <section id="competences" className="section2">
-        <div className="header-top">
-          <div className="numero">3</div>
-          <div className="Titre">COMPÉTENCES</div>
-        </div>
-        <div id="carouselExampleAutoplaying" className="carousel slide" data-bs-ride="carousel">
-          <div className="carousel-inner">
-            <div className="carousel-item active">
-              <img src="/images/Développement.png" className="d-block w-100" alt="Développement Web" />
-            </div>
-            <div className="carousel-item">
-              <img src="/images/Développement%20Web.png" className="d-block w-100" alt="Développement Web" />
-            </div>
-            <div className="carousel-item">
-              <img src="/images/BD.png" className="d-block w-100" alt="Développement Web" />
-            </div>
+    <section id="competences" className="section2">
+      <div className="header-top">
+        <div className="numero">3</div>
+        <div className="Titre">COMPÉTENCES</div>
+      </div>
+      <div id="carouselExampleAutoplaying" className="carousel slide" data-bs-ride="carousel">
+        <div className="carousel-inner">
+          <div className="carousel-item active">
+            <img src="/images/Développement.png" className="d-block w-100" alt="Développement Web" />
           </div>
-          <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
-            <span className="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span className="visually-hidden">Previous</span>
-          </button>
-          <button className="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
-            <span className="carousel-control-next-icon" aria-hidden="true"></span>
-            <span className="visually-hidden">Next</span>
-          </button>
+          <div className="carousel-item">
+            <img src="/images/Développement%20Web.png" className="d-block w-100" alt="Développement Web" />
+          </div>
+          <div className="carousel-item">
+            <img src="/images/BD.png" className="d-block w-100" alt="Développement Web" />
+          </div>
         </div>
-      </section>
+        <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+          <span className="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span className="visually-hidden">Previous</span>
+        </button>
+        <button className="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+          <span className="carousel-control-next-icon" aria-hidden="true"></span>
+          <span className="visually-hidden">Next</span>
+        </button>
+      </div>
+    </section>
   );
 }
+
 function App() {
   const [openItem, setOpenItem] = useState(null);
 
   const toggleItem = (index) => {
-    setOpenItem(openItem === index ? null : index); // Toggle open/close
+    setOpenItem(openItem === index ? null : index); 
   };
 
   const scrollToTop = () => {
@@ -314,16 +317,17 @@ function App() {
       behavior: 'smooth'
     });
   };
-  const startBomberman = () => {
-    axios.get('http://localhost:3002/start-bomberman')
-        .then(response => {
-          alert(response.data);
-        })
-        .catch(error => {
-          alert('Erreur lors du démarrage de Bomberman');
-          console.error(error);
-        });
+  const [showImage, setShowImage] = useState(false);
+
+  const handleImageClick = () => {
+    setShowImage(true);
   };
+
+  const handleCloseImage = () => {
+    setShowImage(false);
+  };
+
+  
   return (
       <div className="App">
         <header className="App-header">
@@ -365,49 +369,53 @@ function App() {
           <PaginationDiplome/>
         </section>
        <Competences />
-        <section id="projets" className="section3">
+       <section id="projets" className="section3">
           <div className="header-top">
             <div className="numero">4</div>
             <div className="Titre-noir">PROJETS</div>
           </div>
           <div className="card-deck">
-            <div className="card" style={{width: '18rem'}}>
-              <img src="/images/bomber.gif" className="card-img-top" alt="..."/>
+            <div className="card" style={{ width: '18rem' }}>
+              <img src="/images/bomber.gif" className="card-img-top" alt="..." />
               <div className="card-body">
                 <h5 className="card-title">Bomberman</h5>
                 <p className="card-text">Application en groupe qui reprend le bomberman..</p>
-                <button className="btn btn-primary" onClick={startBomberman}>Démarrer Bomberman</button>
+                <button className="btn btn-primary" onClick={handleImageClick}>Voir l'image</button>
               </div>
             </div>
-            <div className="card" style={{width: '18rem'}}>
+            <div className="card" style={{ width: '18rem' }}>
               <img src="/images/img/logo.png" className="card-img-top" alt="logo"
-                   style={{width: '80%', height: 'auto',justifyContent:"center",marginLeft:"28px"}}/>
-
+                style={{ width: '80%', height: 'auto', justifyContent: "center", marginLeft: "28px" }} />
               <div className="card-body">
                 <h5 className="card-title">Amateur League</h5>
                 <p className="card-text">Projet en groupe d'un site statique</p>
                 <a href="/société.html" className="btn btn-primary">Aller sur le site</a>
               </div>
             </div>
-            <div className="card" style={{width: '18rem'}}>
-              { /* <img src="..." className="card-img-top" alt="..."></img > */}
+            {/*<div className="card" style={{width: '18rem'}}>
+               <img src="..." className="card-img-top" alt="..."></img > 
               <div className="card-body">
                 <h5 className="card-title">Card title 3</h5>
                 <p className="card-text">Some quick example text to build on the card title and make up the bulk of the
                   card's content.</p>
                 <a href="#" className="btn btn-primary">Go somewhere</a>
               </div>
-            </div>
-            <div className="card" style={{width: '18rem'}}>
-              { /* <img src="..." className="card-img-top" alt="..."></img > */}
+            </div>*/}
+           {/* <div className="card" style={{width: '18rem'}}>
+               <img src="..." className="card-img-top" alt="..."></img >
               <div className="card-body">
                 <h5 className="card-title">Card title 4</h5>
                 <p className="card-text">Some quick example text to build on the card title and make up the bulk of the
                   card's content.</p>
                 <a href="#" className="btn btn-primary">Go somewhere</a>
               </div>
+            </div>*/}
             </div>
-          </div>
+          {showImage && (
+            <div className="overlay" onClick={handleCloseImage}>
+              <img src="/images/bomberimage.png" alt="Bomberman" className="fullscreen-image" />
+            </div>
+          )}
         </section>
         <Personnalite/>
         <section id="loisirs" className="section5">

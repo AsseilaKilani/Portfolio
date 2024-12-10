@@ -1,0 +1,122 @@
+/* Appliquer un fond noir sur toute la navbar */
+
+
+body{
+    padding: 0;
+    margin: 0;
+}
+
+
+
+.navbar:first-of-type {
+    background-color: #3d4351 !important;   }
+  
+  .navbar:first-of-type .nav-link {
+    color: #f4f4f4 !important; }
+  
+  .navbar:first-of-type .nav-link:hover {
+    color: #d4d4d4 !important; }
+.navbar-nav .nav-link {
+    color: #f4f4f4 !important;  
+    font-weight: bold;
+    font-family: 'Poppins', sans serif;        
+}
+
+
+.container-fluid{
+    background-color: #3d4351;
+    
+}
+
+.container{
+    background-color: #b99b6c;
+}
+main{
+   
+    height: 92vh;
+    font-family: 'Poppins', sans serif;        
+    
+    background-color: #b99b6c;
+}
+
+.col{
+    margin-top: 50px;
+    
+}
+
+.display-1{
+    text-align: center;
+   
+    
+    
+}
+
+.section1{
+    height:100vh;
+    background-color: #b99b6c;
+}
+.section2{
+    height:100vh;
+    background-color: #3d4351;
+}
+
+.section3{
+    height:100vh;
+    background-color: #b99b6c;
+}
+
+.section4{
+    height:100vh;
+    background-color: #3d4351;
+}
+
+.section5{
+    height:100vh;
+    background-color: #b99b6c;
+}
+
+.section6{
+    height:100vh;
+    background-color: #3d4351;
+}.welcome-section {
+     display: flex;
+     align-items: center;
+     justify-content: space-between; /* Space between text and photo */
+     padding: 2rem;
+     background-color: #b99b6c; /* Golden background */
+     height: 90vh; /* Adjusted height */
+ }
+
+.welcome-text {
+    text-align: left; /* Align text to the left */
+    flex: 2; /* Increase flex to push text more to the left */
+    font-size: 2.5rem; /* Increase font size */
+    font-family: 'Arial', sans-serif; /* Change to a more interesting font if desired */
+    transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+.welcome-title {
+    font-size: 2rem; /* Increase font size */
+    font-family: 'Arial', sans-serif; /* Change to a more interesting font if desired */
+    margin: 0;
+}
+
+.welcome-photo {
+    flex: 1; /* Decrease flex to push photo more to the right */
+    text-align: right; /* Align photo to the right */
+    transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+.welcome-photo img {
+    width: 300px; /* Increase image size */
+    height: 300px; /* Increase image size */
+    border-radius: 50%;
+    object-fit: cover;
+    transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+.welcome-section:hover .welcome-text,
+.welcome-section:hover .welcome-photo img {
+    transform: scale(1.05);
+    opacity: 0.9;
+}
