@@ -1,0 +1,116 @@
+.section3 {
+    padding: 20px;
+    background-color: #b99b6c; /* Set the background color to the specified color */
+}
+
+.header-top {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 2rem; /* Adds space at the bottom */
+}
+
+.numero {
+    width: 100px;
+    height: 100px;
+    background-color: #3498db;
+    color: white;
+    font-size: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%; /* Creates a round shape */
+    text-align: center;
+    margin-bottom: 1rem; /* Adds space at the bottom */
+    margin-top: 1rem; /* Adds space at the top */
+}
+
+.Titre {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 8rem; /* Set margin-bottom to 8rem for all */
+    color: #61dafb; /* Apply blue color */
+}
+
+.project-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Centers elements horizontally */
+    width: 100%;
+}
+
+.project-item {
+    width: 45%; /* Adjust the width as needed */
+    margin: 1rem; /* Adds space around each item */
+    background-color: #fff;
+    padding: 1rem;
+    border-radius: 10px; /* Adds rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow */
+}
+
+.project-title {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem; /* Adds space below the title */
+}
+
+.project-description {
+    font-size: 1rem;
+    color: #333; /* Set the color for the description text */
+}
+
+.project-image {
+    width: 100%;
+    height: auto;
+    border-radius: 10px; /* Adds rounded corners */
+}
+
+.card-deck {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+@media (max-width: 768px) {
+
+    .section3 .card-deck {
+        flex-direction: column;
+        align-items: center;
+        background-color: transparent;
+        width:100% /* Remove the background color */
+    }
+
+    .section3 .card {
+        width: 100%; /* Make the project cards full width */
+        margin-bottom: 1rem;
+    }
+
+    .section3 .card-body {
+        display: none; /* Hide the card body on small screens */
+    }
+}
+
+@media (max-width: 576px) {
+    .section3 .card {
+        width: 100px;
+        margin: 0 auto;
+    }
+
+    .section3 .card img {
+        width: 100%;
+        height: auto;
+        max-width: 200px;
+        display: block;
+        margin: 0 auto;
+    }
+}
+@media (max-width: 576px) and (orientation: landscape) {
+
+    .section3 .card {
+        width: 120px; /* Réduit encore plus la largeur des cadres en mode paysage */
+    }
+
+    .section3 .card img {
+        max-width: 80px; /* Limite encore plus la largeur maximale des images en mode paysage */
+    }
+}

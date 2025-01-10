@@ -1,0 +1,148 @@
+html,body{
+    padding: 0;
+    margin: 0;
+    overflow-x: hidden;
+}
+
+.section0 {
+    height: 100vh;
+    background-color: #3d4351;
+}
+
+.header-top {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 2rem; /* Adds space at the bottom */
+}
+
+.numero {
+    width: 100px;
+    height: 100px;
+    background-color: #3498db;
+    color: white;
+    font-size: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%; /* Creates a round shape */
+    text-align: center;
+    margin-bottom: 1rem; /* Adds space at the bottom */
+    margin-top: 1rem; /* Adds space at the top */
+}
+
+.Titre {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 8rem; /* Set margin-bottom to 8rem for all */
+    color: #61dafb; /* Apply blue color */
+}
+
+.accordion-container {
+    display: flex;
+    justify-content: center; /* Centers elements horizontally */
+    width: 100%;
+}
+
+.accordion {
+    width: 80%; /* Reduces width to center */
+    max-width: 800px; /* Limits maximum width */
+    margin: 0 auto; /* Centers horizontally */
+}
+
+.accordion-item {
+    text-align: left; /* Aligns text to the left */
+}
+
+.accordion-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background-color: #3d4351;
+    color: #61dafb;
+    font-size: 1.5rem;
+    border: none !important; /* Removes borders */
+    box-shadow: none !important; /* Removes shadows */
+    outline: none !important; /* Removes outlines */
+}
+
+.accordion-title {
+    flex-grow: 1;
+}
+
+.accordion-arrow {
+    transition: transform 0.3s ease;
+}
+
+.accordion-arrow.open {
+    transform: rotate(180deg);
+}
+
+.accordion-collapse {
+    display: none;
+    background-color: #3d4351;
+    color: #61dafb;
+    padding: 1rem;
+    border: none !important; /* Removes borders */
+    box-shadow: none !important; /* Removes shadows */
+    outline: none !important; /* Removes outlines */
+}
+
+.accordion-item,
+.accordion-item * {
+    border: none !important;
+    box-shadow: none !important;
+    outline: none !important;
+}
+
+
+.accordion-collapse.show {
+    display: block;
+}
+
+.accordion-body {
+    padding: 1rem;
+    background-color: #3d4351;
+    color: #61dafb;
+}
+
+.scroll-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #3d4351;
+    color: #f4f4f4;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    font-size: 24px;
+    cursor: pointer;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.scroll-to-top:hover {
+    transform: scale(1.1);
+    opacity: 0.8;
+}
+.App {
+    text-align: center;
+}
+
+.header-top, .Titre, .Titre-noir, .accordion-header, .accordion-body, .diplome-content, .card-body, .footer, .contact-form, .social-links, .copyright {
+    font-family: 'Poppins', sans-serif;
+}
+.App-header {
+    background-color: #3d4351;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centre les éléments horizontalement */
+    padding: 1rem; /* Ajoute un peu de padding */
+    font-size: calc(10px + 2vmin);
+    color: #61dafb;
+}
+@media (max-width: 768px) {
+
+}

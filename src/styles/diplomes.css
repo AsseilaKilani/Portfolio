@@ -1,0 +1,68 @@
+.section1 {
+    padding: 20px;
+    background-color: #b99b6c; /* Set the background color to the specified color */
+}
+
+.header-top {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 2rem; /* Adds space at the bottom */
+}
+
+.numero {
+    width: 100px;
+    height: 100px;
+    background-color: #3498db;
+    color: white;
+    font-size: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%; /* Creates a round shape */
+    text-align: center;
+    margin-bottom: 1rem; /* Adds space at the bottom */
+    margin-top: 1rem; /* Adds space at the top */
+}
+
+.Titre-noir {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 8rem; /* Set margin-bottom to 8rem for all */
+    color: #000000; /* Apply black color */
+}
+
+.pagination {
+    justify-content: center;
+    margin-top: 0.5rem; /* Positionne la pagination plus haut */
+}
+
+.page-item.disabled .page-link {
+    pointer-events: none;
+    opacity: 0.5;
+}
+
+.page-item.active .page-link {
+    background-color: #007bff;
+    border-color: #007bff;
+    color: white;
+}
+
+.diplome-content {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+.diplome-image {
+    width: 600px; /* Adjust the width as needed */
+    height: auto; /* Maintain aspect ratio */
+}
+@media (max-width: 768px) {
+    .diplome-image {
+        width: 80%; /* Adjust the width as needed */
+        height: auto; /* Maintain aspect ratio */;
+    }
+    .page-link {
+        font-size: 0.8rem; /* Reduce the font size for smaller screens */
+        gap:0px;
+        overflow: hidden;  }
+}

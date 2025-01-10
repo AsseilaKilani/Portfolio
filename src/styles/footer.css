@@ -1,0 +1,233 @@
+.footer {
+    background-color: #333; /* Set the background color to dark gray */
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1rem; /* Adds space at the bottom */
+}
+
+.footer-link {
+    margin: 0 1rem; /* Adds space on the left and right */
+    color: white;
+    text-decoration: none; /* Removes underline from links */
+}
+
+.footer-link:hover {
+    text-decoration: underline; /* Adds underline on hover */
+}
+
+.footer-social {
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem; /* Adds space at the top */
+}
+
+.footer-social-icon {
+    margin: 0 0.5rem; /* Adds space on the left and right */
+    color: white;
+    font-size: 1.5rem; /* Adjust the size of the icons */
+}.timeline {
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     position: relative;
+     margin: 2rem 0;
+     padding: 0 2rem;
+ }
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background-color: #3498db;
+    z-index: 1;
+    margin-right: 20px ;
+
+}
+
+.timeline::after {
+    content: '→';
+    position: absolute;
+    top: 47%;
+    right: -0px;
+    transform: translateY(-50%);
+    font-size: 3rem;
+    color: #3498db;
+}
+
+.timeline-item {
+    position: relative;
+    width: 20%;
+    text-align: center;
+}
+
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 1px;
+    height: 50px;
+    background-color: #3498db;
+    z-index: 1;
+    transform: translateY(-50%);
+}
+
+.timeline-content {
+    position: relative;
+    padding: 1rem;
+    background-color: white;
+    border: 1px solid #3498db;
+    border-radius: 8px;
+    z-index: 2;
+    transition: transform 0.3s ease;
+    font-size: 0.8rem; /* Ajuste la taille du texte pour qu'il rentre dans les cadres */
+}
+
+.timeline-content:hover {
+    transform: scale(1.1);
+}
+
+.timeline-icon {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.timeline-description {
+    display: none;
+}
+
+.timeline-content:hover .timeline-description {
+    display: block;
+}
+.footer {
+    background-color: #000;
+    color: #fff;
+    padding: 2rem;
+    text-align: center;
+}
+
+.contact-form {
+    margin-bottom: 2rem;
+}
+
+.contact-form h3 {
+    margin-bottom: 1rem;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    border: none;
+    border-radius: 4px;
+    background-color: #333; /* Couleur de fond plus nuancée et proche du gris */
+    color: #fff; /* Couleur du texte en blanc pour contraste */
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+    color: #bbb; /* Couleur des placeholders en gris clair */
+}
+
+.contact-form button {
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 4px;
+    background-color: #3498db;
+    color: #fff;
+    cursor: pointer;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+
+.social-link {
+    margin: 0 1rem;
+}
+
+.social-link img {
+    width: 40px;
+    height: 40px;
+    transition: all 0.3s ease;
+}
+
+.social-link:hover img {
+    filter: brightness(0) invert(1); /* Clignote en blanc */
+}
+
+.copyright {
+    margin-top: 1rem;
+    font-size: 0.8rem;
+}
+@media (max-width: 768px) {
+    .section6 .experiences-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .section6 .experience-item {
+        width: 100%;
+        margin-bottom: 1rem;
+        border-left: 3px solid #ddd;
+        padding-left: 1rem;
+    }
+
+    .timeline-item .timeline-content {
+
+        font-size: 0.4rem; /* Further reduce the font size for smaller screens */
+    }
+
+    .timeline-item .timeline-icon {
+        left: 5px;
+        font-size: 10px;
+    }
+    .timeline-item {
+        width: 80px
+
+    }
+
+    .timeline-item h3 {
+
+        font-size: 0.7rem; /* Further reduce the font size for smaller screens */
+    }
+
+    .timeline-item .timeline-connector {
+        display: none; /* Hide the connector on small screens */
+    }
+
+    .timeline-connector {
+        display: none; /* Hide the arrow on small screens */
+    }
+    .timeline::after{
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 0;
+        right: 0;
+        height: 3px;
+        background-color: #3498db;
+        z-index: 1;
+        margin-right: 20px ;
+    }
+
+}

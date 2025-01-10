@@ -1,11 +1,12 @@
 /* Appliquer un fond noir sur toute la navbar */
 
 
-body{
+
+html,body{
     padding: 0;
     margin: 0;
+    overflow-x: hidden;
 }
-
 
 
 .navbar:first-of-type {
@@ -79,7 +80,8 @@ main{
     height:100vh;
     background-color: #3d4351;
 }.welcome-section {
-     display: flex;
+     display: flex;  flex-direction: row;
+
      align-items: center;
      justify-content: space-between; /* Space between text and photo */
      padding: 2rem;
@@ -120,3 +122,56 @@ main{
     transform: scale(1.05);
     opacity: 0.9;
 }
+
+.download-button {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.download-button:hover {
+    background-color: #0056b3;
+}
+@media (max-width: 576px)  {
+    .welcome-photo img {
+        width: 200px; /* Ajuste la taille de l'image pour les petits écrans en mode paysage */
+        height: 200px; /* Ajuste la taille de l'image pour les petits écrans en mode paysage */
+    }
+    .welcome-section {
+        flex-direction: column;
+        align-items: center; /* Center align items */
+    }
+
+    .welcome-photo {
+        order: -1; /* Move the photo above the text */
+        text-align: center; /* Center align the photo */
+    }
+
+    .welcome-text {
+        text-align: center; /* Center align the text */
+    }
+    .section {
+        padding: 10px; /* Réduit le padding des sections en mode paysage */
+    }
+
+    .section4 .image-container {
+        width: 80px; /* Diminue encore plus la largeur des cadres en mode paysage */
+        height: 80px; /* Diminue encore plus la hauteur des cadres en mode paysage */
+    }
+
+    .section3 .card {
+        width: 120px; /* Réduit encore plus la largeur des cadres en mode paysage */
+    }
+
+    .section3 .card img {
+        max-width: 80px; /* Limite encore plus la largeur maximale des images en mode paysage */
+    }
+}
+
+

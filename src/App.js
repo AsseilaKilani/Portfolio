@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css'; // Ajout du CSS Bootstrap
 import 'bootstrap/dist/js/bootstrap.bundle.min.js'; // Ajout du JS Bootstrap
 import './css/bootstrap.css';
@@ -308,7 +307,7 @@ function App() {
   const [openItem, setOpenItem] = useState(null);
 
   const toggleItem = (index) => {
-    setOpenItem(openItem === index ? null : index); 
+    setOpenItem(openItem === index ? null : index);
   };
 
   const scrollToTop = () => {
@@ -327,7 +326,7 @@ function App() {
     setShowImage(false);
   };
 
-  
+
   return (
       <div className="App">
         <header className="App-header">
@@ -393,7 +392,7 @@ function App() {
               </div>
             </div>
             {/*<div className="card" style={{width: '18rem'}}>
-               <img src="..." className="card-img-top" alt="..."></img > 
+               <img src="..." className="card-img-top" alt="..."></img >
               <div className="card-body">
                 <h5 className="card-title">Card title 3</h5>
                 <p className="card-text">Some quick example text to build on the card title and make up the bulk of the

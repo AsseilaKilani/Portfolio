@@ -1,0 +1,171 @@
+.section4 {
+    padding: 20px;
+    background-color: #3d4351; /* Set the background color to the specified color */
+}
+
+.header-top {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 2rem; /* Adds space at the bottom */
+}
+
+.numero {
+    width: 100px;
+    height: 100px;
+    background-color: #3498db;
+    color: white;
+    font-size: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%; /* Creates a round shape */
+    text-align: center;
+    margin-bottom: 1rem; /* Adds space at the bottom */
+    margin-top: 1rem; /* Adds space at the top */
+}
+
+.Titre {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 8rem; /* Set margin-bottom to 8rem for all */
+    color: #61dafb; /* Apply blue color */
+}
+
+.personnalite-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Centers elements horizontally */
+    width: 100%;
+}
+
+.personnalite-item {
+    width: 45%; /* Adjust the width as needed */
+    margin: 1rem; /* Adds space around each item */
+    background-color: #fff;
+    padding: 1rem;
+    border-radius: 10px; /* Adds rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow */
+}
+
+.personnalite-title {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem; /* Adds space below the title */
+}
+
+.personnalite-description {
+    font-size: 1rem;
+    color: #333; /* Set the color for the description text */
+}
+
+.personnalite-image {
+    width: 100%;
+    height: auto;
+    border-radius: 10px; /* Adds rounded corners */
+}
+
+
+.image-line {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+}
+
+.image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 100px;
+    border: 1px solid #000;
+    margin: 0 10px;
+}
+
+.image-placeholder {
+    font-size: 2rem;
+}
+
+.separator {
+    width: 2px;
+    height: 100px;
+    background-color: #000;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+.image-line {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.image-container {
+    position: relative;
+    width: 150px; /* Increased size */
+    height: 150px; /* Increased size */
+    margin: 20px;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.image-container.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.image-title {
+    position: absolute;
+    top: -30px; /* Position text above the image */
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+}
+@media (max-width: 768px) {
+    .section4 .image-container img {
+        width: 100%;
+        height: auto;
+        border: 3px solid #ddd; /* Add a border to the images */
+        border-radius: 10px; /* Add rounded corners to the images */
+    }
+
+
+    .section4 .image-container {
+        flex: 1 1 calc(33.333% - 10px); /* Adjust the width of each item for smaller screens */
+        max-width: 100px;
+    }
+
+    .section4 .image-title {
+        font-size: 0.8rem; /* Reduce the font size for smaller screens */
+    }
+}
+@media (max-width: 576px) {
+    .section4 .header-top {
+        margin-bottom: 0px; /* Diminue l'espace entre le titre et les premières images */
+    }
+
+    .section4 .image-line {
+        margin-top: -100px; /* Ajuste l'espace au-dessus des images */
+    }
+    .section4 .image-container {
+        width: 100px; /* Diminue la largeur des cadres */
+        height: 100px; /* Diminue la hauteur des cadres */
+    }
+
+}
+@media (max-width: 576px) and (orientation: landscape) {
+
+    .section4 .image-container {
+        width: 80px; /* Diminue encore plus la largeur des cadres en mode paysage */
+        height: 80px; /* Diminue encore plus la hauteur des cadres en mode paysage */
+    }
+}

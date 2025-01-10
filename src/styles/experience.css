@@ -1,0 +1,68 @@
+.section6 {
+    padding: 20px;
+    background-color: #3d4351; /* Set the background color to the specified color */
+}
+
+.header-top {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 2rem; /* Adds space at the bottom */
+}
+
+.numero {
+    width: 100px;
+    height: 100px;
+    background-color: #3498db;
+    color: white;
+    font-size: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%; /* Creates a round shape */
+    text-align: center;
+    margin-bottom: 1rem; /* Adds space at the bottom */
+    margin-top: 1rem; /* Adds space at the top */
+}
+
+.Titre {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 8rem; /* Set margin-bottom to 8rem for all */
+    color: #61dafb; /* Apply blue color */
+}
+
+.experience-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Centers elements horizontally */
+    width: 100%;
+}
+
+.experience-item {
+    width: 45%; /* Adjust the width as needed */
+    margin: 1rem; /* Adds space around each item */
+    background-color: #fff;
+    padding: 1rem;
+    border-radius: 10px; /* Adds rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow */
+}
+
+.experience-title {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem; /* Adds space below the title */
+}
+
+.experience-description {
+    font-size: 1rem;
+    color: #333; /* Set the color for the description text */
+}
+
+.experience-image {
+    width: 100%;
+    height: auto;
+    border-radius: 10px; /* Adds rounded corners */
+}
+@media (max-width: 768px) {
+
+}
